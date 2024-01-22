@@ -1,5 +1,3 @@
-import kotlin.random.Random
-
 /*
 Desarrolla un programa con las siguientes clases:
 
