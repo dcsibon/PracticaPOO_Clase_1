@@ -32,6 +32,7 @@ Implementa, al menos, lo siguiente:
 
 En el programa principal se deben crear 3 cafeteras de capacidad 1000, 750 y 500 c.c. con 0, 750 y 200 c.c de cantidad respectivamente. Para crear cada cafetera, debéis utilizar un constructor diferente.
 También debéis generar una lista de 20 tazas con la capacidad de 50, 75 y 100 de manear aleatoria.
+Implementar el resto de comentarios TODO de la función main().
 */
 
 /**
