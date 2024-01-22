@@ -3,8 +3,10 @@ Desarrolla un programa con las siguientes clases:
 
 - Clase Cafetera con atributos ubicacion (nombre de la sala o habitación dónde se encuentra), capacidad (la cantidad máxima de café que puede contener la cafetera) y cantidad (la cantidad actual de café
 que hay en la cafetera).
-Implementa, al menos, los siguientes métodos:
-    * En la clase se debe establecer la capacidad máxima en 1000 (c.c.) y la actual en cero (cafetera vacía).
+
+Implementa, al menos, lo siguiente:
+
+    * En la clase se debe establecer la capacidad máxima en 1000 (c.c.) y la cantidad actual en cero (cafetera vacía).
     * Constructor primario con la ubicacion.
     * Constructor secundario con la ubicación y la capacidad máxima de la cafetera. Inicializa la cantidad actual de café igual a la capacidad máxima.
     * Constructor secundario con la ubicacion, la capacidad máxima y la cantidad actual. Si la cantidad actual es mayor que la capacidad máxima de la cafetera, la ajustará al máximo.
@@ -15,7 +17,9 @@ Implementa, al menos, los siguientes métodos:
     * toString(): debe retornar por ejemplo "Cafetera(ubicación = Salón, capacidad = 1000 c.c., cantidad = 0 c.c.)"
 
 - Clase Taza, que tendrá los atributos color, capacidad y cantidad.
-Implementa, al menos, los siguientes métodos:
+
+Implementa, al menos, lo siguiente:
+
     * Un único constructor con el color (por defecto blanco) y la capacidad (por defecto 50 c.c.). La clase también contendrá un atributo con la cantidad que se establcerá a 0.
     * La propiedad cantidad debe modificarse para que si el valor que recibe es mayor que la capacidad de la taza, solo establezca el valor de dicha capacidad.
     * El método llenar() que establecerá la cantidad de la taza a su máxima capacidad.
