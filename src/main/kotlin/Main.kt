@@ -111,8 +111,8 @@ fun main() {
     //TODO: Crear una lista de 20 tazas con capacidades aleatorias
     val tazas = crearListaTazas()
 
-    //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
     println("**********************************************")
+    //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
     mostrarInfo(tazas, listOf(cafetera1, cafetera2, cafetera3))
 
     println("**********************************************")
@@ -132,8 +132,8 @@ fun main() {
     //TODO: Agregar 400 c.c. de café a la cafereta3
     cafetera3.agregarCafe(400)
 
-    //TODO: Mostrar por pantalla el contenido de las 3 cafeteras
     println("**********************************************")
+    //TODO: Mostrar por pantalla el contenido de las 3 cafeteras
     mostrarCafeteras(cafeteras)
 
     println("**********************************************")
@@ -154,8 +154,8 @@ fun main() {
         }
     }*/
 
-    //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
     println("**********************************************")
+    //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
     mostrarInfo(tazas, cafeteras)
 
 }
