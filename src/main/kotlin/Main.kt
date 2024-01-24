@@ -1,5 +1,3 @@
-import kotlin.random.Random
-
 /*
 Desarrolla un programa con las siguientes clases:
 
@@ -35,75 +33,6 @@ También debéis generar una lista de 20 tazas con la capacidad de 50, 75 y 100 
 Implementar el resto de comentarios TODO de la función main().
 */
 
-/**
- * Crea y devuelve una lista de 20 tazas con capacidades aleatorias (50, 75 o 100 c.c.).
- * Los colores de las tazas son seleccionados aleatoriamente de entre los colores disponibles.
- * @return Lista de tazas generadas.
- */
-fun crearListaTazas() : List<Taza> {
-    val tazas = mutableListOf<Taza>()
-
-    for (i in 1..20) {
-        val capacidadAleatoria = when (Random.nextInt(3)) {
-            0 -> 50
-            1 -> 75
-            else -> 100
-        }
-        val taza = Taza(Color.entries.toTypedArray().random(), capacidadAleatoria)
-        tazas.add(taza)
-    }
-
-    return tazas.toList()
-}
-
-/**
- * Simula la acción de servir cada taza en la lista utilizando las cafeteras proporcionadas.
- * Las tazas se sirven una por una, y se utiliza la primera cafetera disponible.
- * @param tazas Lista de tazas a servir.
- * @param cafeteras Lista de cafeteras disponibles para servir.
- */
-fun servirTazas(tazas: List<Taza>, cafeteras: List<Cafetera>) {
-    for (taza in tazas) {
-        for (cafetera in cafeteras) {
-            if (cafetera.cantidad > 0) {
-                cafetera.servirTaza(taza)
-                //Si se utilizó una cafetera, salimos del bucle for porque ya sirvió la taza
-                break
-            }
-        }
-    }
-}
-
-/**
- * Muestra la información de las tazas y las cafeteras proporcionadas.
- * @param tazas Lista de tazas a mostrar.
- * @param cafeteras Lista de cafeteras a mostrar.
- */
-fun mostrarInfo(tazas: List<Taza>, cafeteras: List<Cafetera>) {
-    mostrarCafeteras(cafeteras)
-    mostrarTazas(tazas)
-}
-
-/**
- * Muestra la información de cada taza en la lista.
- * @param tazas Lista de tazas a mostrar.
- */
-fun mostrarTazas(tazas: List<Taza>) {
-    for (taza in tazas) {
-        println(taza)
-    }
-}
-
-/**
- * Muestra la información de cada cafetera en la lista.
- * @param cafeteras Lista de cafeteras a mostrar.
- */
-fun mostrarCafeteras(cafeteras: List<Cafetera>) {
-    for (cafetera in cafeteras) {
-        println(cafetera)
-    }
-}
-
 fun main() {
 
     //TODO: Crear 3 cafeteras en la Sala, Cocina y Oficina
@@ -114,11 +43,11 @@ fun main() {
     val cafeteras = listOf(cafetera1, cafetera2, cafetera3)
 
     //TODO: Crear una lista de 20 tazas con capacidades aleatorias
-    val tazas = crearListaTazas()
+    val tazas = GestionCafes.crearListaTazas()
 
     println("**********************************************")
     //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
-    mostrarInfo(tazas, listOf(cafetera1, cafetera2, cafetera3))
+    GestionCafes.mostrarInfo(tazas, listOf(cafetera1, cafetera2, cafetera3))
 
     println("**********************************************")
     println("Llenar la cafetera1 de café...")
@@ -139,28 +68,15 @@ fun main() {
 
     println("**********************************************")
     //TODO: Mostrar por pantalla el contenido de las 3 cafeteras
-    mostrarCafeteras(cafeteras)
+    GestionCafes.mostrarCafeteras(cafeteras)
 
     println("**********************************************")
     println("Servir café en las tazas...")
 
     //TODO: Servir café en las tazas... siempre que haya café en la cafetera y en el orden cafetera1, cafetera2 y cafetera3.
-    servirTazas(tazas, cafeteras)
-    /*
-    for (taza in tazas) {
-        if (cafetera1.cantidad > 0) {
-            cafetera1.servirTaza(taza)
-        }
-        else if (cafetera2.cantidad > 0) {
-            cafetera2.servirTaza(taza)
-        }
-        else {
-            cafetera3.servirTaza(taza)
-        }
-    }*/
+    GestionCafes.servirTazas(tazas, cafeteras)
 
     println("**********************************************")
     //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
-    mostrarInfo(tazas, cafeteras)
-
+    GestionCafes.mostrarInfo(tazas, cafeteras)
 }
