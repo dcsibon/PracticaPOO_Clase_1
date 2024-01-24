@@ -47,7 +47,7 @@ fun main() {
 
     println("**********************************************")
     //TODO: Mostrar por pantalla el contenido de las 3 cafeteras y las tazas.
-    GestionCafes.mostrarInfo(tazas, listOf(cafetera1, cafetera2, cafetera3))
+    GestionCafes.mostrarInfo(tazas, cafeteras)
 
     println("**********************************************")
     println("Llenar la cafetera1 de café...")
